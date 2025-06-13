@@ -1,0 +1,98 @@
+:root {
+  --green-main: #2ecc71;
+  --green-dark: #27ae60;
+  --green-light: #d5f5e3;
+  --green-lighter: #e8f8f0;
+  --gray-light: #f8f9fa;
+  --gray-medium: #e9ecef;
+  --gray-dark: #2c3e50;
+  --text-dark: #212529;
+  --text-medium: #495057;
+  --text-light: #f8f9fa;
+  --border-radius: 12px;
+  --border-radius-sm: 8px;
+  --border-radius-lg: 16px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s ease-in-out;
+  --transition-fast: all 0.15s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ========== HEADER UNIVERSAL ========== */
+header.site-header {
+  background-color: var(--white);
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  height: 150px;
+  object-fit: contain;
+}
+
+/* ========== NAV (MENU) ========== */
+.main-nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-button {
+  text-decoration: none;
+  background-color: var(--green-main);
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.menu-button:hover {
+  background-color: var(--green-dark);
+}
+
+/* ========== FOOTER UNIVERSAL ========== */
+footer.site-footer {
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer-links {
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--green-main);
+}
