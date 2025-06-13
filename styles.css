@@ -75,7 +75,7 @@ header.site-header {
 
 /* ========== FOOTER UNIVERSAL ========== */
 footer.site-footer {
-  background-color: var(--dark-gray);
+  background-color: var(--gray-dark);
   color: var(--white);
   padding: 2rem 1rem;
   text-align: center;
