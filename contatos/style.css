@@ -1,0 +1,169 @@
+:root {
+    --primary-green: #4CAF50; /* Um tom de verde para contrastar com o logo */
+    --light-gray-bg: #f0f0f0;
+    --medium-gray-text: #666666;
+    --dark-gray-elements: #444444;
+    --light-input-bg: #e0e0e0; /* Um cinza mais claro para os inputs */
+    --border-color: #cccccc;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray-bg);
+    color: var(--dark-gray-elements);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: white; /* Ou um cinza claro para o cabeçalho */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 100px; /* Ajuste o tamanho do seu logo conforme necessário */
+}
+
+/* Container principal da página de contato */
+.contact-page-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Seção superior: formulário e imagem */
+.contact-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos quebrem a linha em telas menores */
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-form-container {
+    flex: 1;
+    min-width: 300px; /* Garante que o formulário não fique muito estreito */
+    padding: 20px;
+    background-color: var(--light-gray-bg); /* Cinza claro para o fundo do formulário */
+    border-radius: 8px;
+}
+
+.contact-form-container h1 {
+    color: var(--dark-gray-elements);
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: calc(100% - 20px); /* Largura total menos o padding */
+    padding: 15px 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--light-input-bg);
+    font-size: 1em;
+    color: var(--medium-gray-text);
+}
+
+.contact-form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+.contact-form button {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #45a049; /* Um verde um pouco mais escuro no hover */
+}
+
+.contact-image-container {
+    flex: 1;
+    min-width: 300px; /* Garante que a imagem não fique muito estreita */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que a imagem não transborde */
+    border-radius: 8px;
+    background-color: var(--light-gray-bg); /* Fundo para a imagem */
+}
+
+.contact-image {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove espaço extra abaixo da imagem */
+    border-radius: 8px;
+}
+
+/* Seções de informação de contato (endereços) */
+.info-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.info-block {
+    flex: 1;
+    min-width: 280px; /* Garante que os blocos de info não fiquem muito estreitos */
+    background-color: var(--light-gray-bg); /* Fundo para os blocos de info */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.info-block h2 {
+    color: var(--dark-gray-elements);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.info-block p {
+    color: var(--medium-gray-text);
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--dark-gray-elements);
+    color: white;
+    margin-top: 40px;
+}
+
+/* Media Queries para responsividade básica */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column; /* Empilha o formulário e a imagem em telas menores */
+    }
+
+    .info-sections {
+        flex-direction: column; /* Empilha os blocos de informação em telas menores */
+    }
+
+    .contact-form-container,
+    .contact-image-container,
+    .info-block {
+        min-width: unset; /* Remove o min-width para permitir que ocupem a largura total */
+        width: 100%;
+    }
+}
