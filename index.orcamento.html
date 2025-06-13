@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento de Viagem - Agência de Viagens Fictícia</title>
+    <link rel="stylesheet" href="style.orcamento.css">
+</head>
+<body>
+    <header>
+        <h1>DevTrip</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Destinos</a></li>
+                <li><a href="#">Pacotes</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="budget-form-section">
+            <h2>Solicite seu Orçamento de Viagem</h2>
+            <form class="budget-form">
+                <div class="form-group">
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="destination">Destino Desejado:</label>
+                    <input type="text" id="destination" name="destination" placeholder="Ex: Paris, Maldivas, Nordeste do Brasil" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="departure-date">Data de Partida Preferencial:</label>
+                    <input type="date" id="departure-date" name="departure-date">
+                </div>
+
+                <div class="form-group">
+                    <label for="return-date">Data de Retorno Preferencial:</label>
+                    <input type="date" id="return-date" name="return-date">
+                </div>
+
+                <div class="form-group">
+                    <label for="adults">Número de Adultos:</label>
+                    <input type="number" id="adults" name="adults" min="1" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="children">Número de Crianças (0-12 anos):</label>
+                    <input type="number" id="children" name="children" min="0" value="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="travel-type">Tipo de Viagem:</label>
+                    <select id="travel-type" name="travel-type">
+                        <option value="lazer">Lazer</option>
+                        <option value="negocios">Negócios</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="familia">Família</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget-range">Faixa de Orçamento (por pessoa):</label>
+                    <select id="budget-range" name="budget-range">
+                        <option value="any">Sem preferência</option>
+                        <option value="low">Até R$ 2.000</option>
+                        <option value="medium">R$ 2.000 - R$ 5.000</option>
+                        <option value="high">Acima de R$ 5.000</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensagem Adicional (opcional):</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Conte-nos mais sobre suas preferências ou necessidades especiais."></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Solicitar Orçamento</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Agência de Viagens Fictícia. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
